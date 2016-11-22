@@ -1,0 +1,33 @@
+.splitpane {
+	-fx-background-fills: #ffffff;
+}
+
+.vbox {
+	-fx-background-color: #00796B;
+}
+
+.btLogin{
+	-fx-background-color:#009688;
+	-fx-text-fill: #FFFFFF;	
+}
+
+.btLogin:hover {
+	-fx-background-color: #B2DFDB;
+	-fx-cursor: hand;
+}
+
+.btSignUp {
+	-fx-background-color:#009688;
+	-fx-text-fill: #FFFFFF;	
+}
+
+.btSignUp:hover {
+	-fx-background-color: #B2DFDB;
+	-fx-cursor: hand;
+}
+
+.text {
+	
+	-fx-text-fill: #FFFFFF;	
+	
+}

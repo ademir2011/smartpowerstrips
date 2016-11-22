@@ -1,0 +1,27 @@
+.background {
+	-fx-background-color: #009688;
+}
+
+.button {
+	
+	-fx-pref-width: 100px;
+	-fx-pref-height: 35px;
+	-fx-background-color: #00796B;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 12px;
+	-fx-font-family: Tahoma;
+	
+}
+
+.button:hover {
+	-fx-background-color: #B2DFDB;
+	-fx-cursor: hand;
+	-fx-text-fill: #00796B;
+}
+
+.textStyle {
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 15px;
+	-fx-font-family: Tahoma;
+}
+
