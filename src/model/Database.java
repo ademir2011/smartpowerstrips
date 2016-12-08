@@ -9,7 +9,7 @@ import com.mysql.jdbc.PreparedStatement;
 public class Database {
 
     private static final String USER = "root";
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/powerstripsdb?useSSL=false";
     private static final String DRIVER = "com.mysql.jdbc.Driver";
 

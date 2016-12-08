@@ -39,9 +39,10 @@ public class SignInController {
 		Usuario usuario = new Usuario(tfName.getText(),tfPassword.getText());
 
 		if(usuario.autenticate()){
+			MainApp.setUsuario(usuario);
 			Util.gotoPage(menuAuthenticated, "../view/MenuAuthenticated.fxml", "MenuAuthenticatedController", mainApp);
 			Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
-			MainApp.setUsuario(usuario);
+			
 		}else{
 			//Mensagem dizendo que houve falha na autenticação
 		}

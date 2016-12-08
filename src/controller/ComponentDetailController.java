@@ -43,8 +43,12 @@ public class ComponentDetailController {
 	    System.out.println(MainApp.getComponenteMain().getNome());
 	}
 	
+	boolean close = false;
+	
 	@FXML
 	public void handlerLigar(){
+		
+		close = false;
 		
 		new Thread( new Runnable() {
 			
@@ -68,6 +72,7 @@ public class ComponentDetailController {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					if (close) break;
 				}
 			    
 			}
@@ -78,6 +83,8 @@ public class ComponentDetailController {
 	
 	@FXML
 	public void handlerDesligar(){
+		
+		close = true;
 		
 	}
 	

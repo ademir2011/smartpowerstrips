@@ -30,36 +30,18 @@ public class TutorialController {
 	
 	public void initialize(){
     	
-//		media = new Media("file:///C://Users//ademi//Downloads//vangelis.mp4");
-//    	
-//    	mp = new MediaPlayer(media);
-//    	mvMedia.setMediaPlayer(mp);
-//    	mp.setAutoPlay(true);
-//    	
-//    	sliderMedia.setOnMousePressed(new EventHandler<MouseEvent>(){
-//    	    @Override
-//    	    public void handle(MouseEvent event) {
-//    	    	mp.seek(Duration.seconds(sliderMedia.getValue()));
-//    	    }
-//    	});
+		media = new Media("file:///C://Users//ademi//Downloads//video.mp4");
     	
-    }
-    
-    @FXML
-    public void handlerRefresh(){
+    	mp = new MediaPlayer(media);
+    	mvMedia.setMediaPlayer(mp);
+    	mp.setAutoPlay(true);
     	
-//		media = new Media("file:///"+mediathis.getFilePath().replace("\\", "/"));
-//    	
-//    	mp = new MediaPlayer(media);
-//    	mvMedia.setMediaPlayer(mp);
-//    	mp.setAutoPlay(true);
-//    	
-//    	sliderMedia.setOnMousePressed(new EventHandler<MouseEvent>(){
-//    	    @Override
-//    	    public void handle(MouseEvent event) {
-//    	    	mp.seek(Duration.seconds(sliderMedia.getValue()));
-//    	    }
-//    	});
+    	sliderMedia.setOnMousePressed(new EventHandler<MouseEvent>(){
+    	    @Override
+    	    public void handle(MouseEvent event) {
+    	    	mp.seek(Duration.seconds(sliderMedia.getValue()));
+    	    }
+    	});
     	
     }
     
