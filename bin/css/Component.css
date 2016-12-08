@@ -1,25 +1,25 @@
-.splitpane {
-	-fx-background-fills: #ffffff;
+.background {
+	-fx-background-color: #009688;
 }
 
-.vbox {
-	-fx-background-color: #292c2f;
+.button {
+
+	-fx-background-color: #00796B;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 14px;
+	-fx-font-family: Tahoma;
+	
 }
 
-.btLogin{
-	-fx-background-color:#35393e;
-}
-
-.btLogin:hover {
-	-fx-background-color: #ffffff;
+.button:hover {
+	-fx-background-color: #B2DFDB;
 	-fx-cursor: hand;
+	-fx-text-fill: #00796B;
 }
 
-.btSignUp {
-	-fx-background-color:#35393e;
+.textStyle {
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 15px;
+	-fx-font-family: Tahoma;
 }
 
-.btSignUp:hover {
-	-fx-background-color: #ffffff;
-	-fx-cursor: hand;
-}

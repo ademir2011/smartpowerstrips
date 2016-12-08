@@ -49,6 +49,7 @@ public class MenuLoginController {
 		// Carrega o sign up.
 		FXMLLoader loaderSignUp = new FXMLLoader();
 		loaderSignUp.setLocation(MainApp.class.getResource("../view/SignUp.fxml"));
+		
 		try {
 			signUp = (AnchorPane) loaderSignUp.load();
 		} catch (IOException e1) {

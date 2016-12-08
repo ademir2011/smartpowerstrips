@@ -22,10 +22,7 @@ public class MainApp extends Application {
 	
 	@FXML
 	AnchorPane signIn;
-	
-	@FXML
-	AnchorPane signUp;
-	
+  
 	@FXML
 	private BorderPane rootBorderLayout;
 	
@@ -44,40 +41,28 @@ public class MainApp extends Application {
 	 */
 	public void initRootLayout() {
 
+		// Carrega o root layout do arquivo fxml.
+		loader = new FXMLLoader();
+		loader.setController(this);
+		loader.setLocation(MainApp.class.getResource("../view/MainApp.fxml"));
+		
 		try {
-			
-			// Carrega o root layout do arquivo fxml.
-			loader = new FXMLLoader();
-			loader.setController(this);
-			loader.setLocation(MainApp.class.getResource("../view/MainApp.fxml"));
 			rootBorderLayout = (BorderPane) loader.load();
-			
-			// Carrega o sign up.
-			loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("../view/SignIn.fxml"));
-			signIn = (AnchorPane) loader.load();
-			
-			// Carrega o sign up.
-			loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("../view/MenuLogin.fxml"));
-			menuLogin = (AnchorPane) loader.load();
-			
-			MenuLoginController menuLoginController = loader.getController();
-			menuLoginController.setMainApp(this);
-
-			rootBorderLayout.setCenter(signIn);
-			rootBorderLayout.setLeft(menuLogin);
-			
-			// Mostra a scene (cena) contendo o root layout.
-			scene = new Scene(rootBorderLayout);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
+		Util.gotoPage(signIn, "../view/SignIn.fxml", "SignInController", this);
+		Util.gotoPage(menuLogin, "../view/MenuLogin.fxml", "MenuLoginController", this);
+		
+		// Mostra a scene (cena) contendo o root layout.
+		scene = new Scene(rootBorderLayout);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		
 	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

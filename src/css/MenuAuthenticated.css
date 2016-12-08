@@ -13,6 +13,7 @@
 .btLogin:hover {
 	-fx-background-color: #ffffff;
 	-fx-cursor: hand;
+	-fx-text-fill: #00796B;
 }
 
 .btSignUp {
@@ -22,4 +23,5 @@
 .btSignUp:hover {
 	-fx-background-color: #ffffff;
 	-fx-cursor: hand;
+	-fx-text-fill: #00796B;
 }

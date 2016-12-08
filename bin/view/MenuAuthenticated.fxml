@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane fx:id="menuAuthenticated" prefHeight="600.0" prefWidth="130.0" stylesheets="@../css/MenuLogin.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAuthenticatedController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="610.0" prefWidth="140.0" spacing="5.0" styleClass="vbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="56.0" prefWidth="130.0" styleClass="text" text="Smart Power Strips" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handlerHome" prefHeight="100.0" prefWidth="100.0" styleClass="btLogin" text="Home" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handlerRegisterComponent" prefHeight="100.0" prefWidth="100.0" styleClass="btLogin" text="Cadastrar componente" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handlerRemoveComponent" prefHeight="100.0" prefWidth="100.0" styleClass="btSignUp" text="Deletar componente" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handlerTutorial" prefHeight="100.0" prefWidth="100.0" styleClass="btSignUp" text="Ver tutorial informativo" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handlerBack" prefHeight="100.0" prefWidth="100.0" styleClass="btSignUp" text="Sair" textAlignment="CENTER" textFill="#7c8085" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
-
