@@ -40,6 +40,7 @@ public class ComponentDetailController {
     public void initialize() {
 		series1.setName("Ponto de fechamento de ciclo");
 	    lineChart.getData().addAll(series1);
+	    System.out.println(MainApp.getComponenteMain().getNome());
 	}
 	
 	@FXML
@@ -49,7 +50,8 @@ public class ComponentDetailController {
 			
 			@Override
 			public void run() {
-
+//				Estatistica e = new Estatistica(null,true);
+//				e.addEstatistica(c.getNome());
 				for(int i = 0; i < 100; i++){
 					Platform.runLater(new Runnable() {
 		                 @Override public void run() {

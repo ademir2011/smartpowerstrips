@@ -37,14 +37,12 @@ public class MenuAuthenticatedController {
 	
 	@FXML
 	public void handlerHome(){
-		
 		Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
 		
 	}
 	
 	@FXML
 	public void handlerRegisterComponent(){
-		
 		Util.gotoPage(registerComponent, "../view/RegisterComponent.fxml", "RegisterComponentController", mainApp);
 		
 	}

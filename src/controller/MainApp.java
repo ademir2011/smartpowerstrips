@@ -6,12 +6,34 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import model.Componente;
+import model.Usuario;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 
 public class MainApp extends Application {
+	
+	private static Usuario usuario;
+	private static Componente componenteMain;
+	
+	public static Componente getComponenteMain() {
+		return componenteMain;
+	}
+
+	public static void setComponenteMain(Componente componenteMain) {
+		MainApp.componenteMain = componenteMain;
+	}
+
+	public static Usuario getUsuario() {
+		return usuario;
+	}
+
+	public static void setUsuario(Usuario usuario) {
+		MainApp.usuario = usuario;
+	}
+
 	
 	private Stage primaryStage;
 	Scene scene;
