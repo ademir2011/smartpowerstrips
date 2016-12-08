@@ -1,11 +1,13 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Usuario;
 
 public class SignInController {
 
@@ -32,12 +34,16 @@ public class SignInController {
 	}
 	
 	@FXML
-	public void handlerLoginUser(){
+	public void handlerLoginUser() throws ClassNotFoundException, SQLException{
 		
-		
-		
-		Util.gotoPage(menuAuthenticated, "../view/MenuAuthenticated.fxml", "MenuAuthenticatedController", mainApp);
-		Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
+		Usuario usuario = new Usuario(tfName.getText(),tfPassword.getText());
+
+		if(usuario.autenticate()){
+			Util.gotoPage(menuAuthenticated, "../view/MenuAuthenticated.fxml", "MenuAuthenticatedController", mainApp);
+			Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
+		}else{
+			//Mensagem dizendo que houve falha na autenticação
+		}
 		
 	}
 	

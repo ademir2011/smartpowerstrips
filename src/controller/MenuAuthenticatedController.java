@@ -37,7 +37,17 @@ public class MenuAuthenticatedController {
 	
 	@FXML
 	public void handlerHome(){
+		//TODO URGENTE iterar a listar de componentes
 		
+//		
+//		List<Componente> componentes = eu.getUsuarioComponentes();
+//		for (Componente componente : componentes) {
+//			List<Estatistica> estatisticas = componente.getComponenteEstatisticas();
+//			for(Estatistica estatistica : estatisticas){
+//				System.out.println(estatistica.getHorario());
+//				System.out.println(estatistica.isValor());
+//			}
+//		}
 		Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
 		
 	}

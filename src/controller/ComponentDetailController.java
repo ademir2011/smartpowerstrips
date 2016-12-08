@@ -49,7 +49,8 @@ public class ComponentDetailController {
 			
 			@Override
 			public void run() {
-
+//				Estatistica e = new Estatistica(null,true);
+//				e.addEstatistica(c.getNome());
 				for(int i = 0; i < 100; i++){
 					Platform.runLater(new Runnable() {
 		                 @Override public void run() {
