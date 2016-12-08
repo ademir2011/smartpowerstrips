@@ -1,9 +1,16 @@
 package controller;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import model.Componente;
 
 public class RemoveComponentController {
@@ -18,13 +25,37 @@ public class RemoveComponentController {
 		this.mainApp = mainApp;
 		
 	}
+
+	List<String> nomesComponentes;
+	SpinnerValueFactory valueFactory;
+	
+    public void initialize() throws ClassNotFoundException, SQLException{
+		List<Componente> componentes = MainApp.getUsuario().getUsuarioComponentes();
+		nomesComponentes =  new ArrayList<String>();
+		for (Componente componente : componentes) {
+			nomesComponentes.add(componente.getNome());			
+		}
+		
+    	valueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<String>(FXCollections.observableArrayList(nomesComponentes));
+    	spinner.setValueFactory(valueFactory);
+    }
 	
 	@FXML
 	public void handlerRemove() throws ClassNotFoundException, SQLException{
 		
 		//TODO URGENTE iterar listar de componentes
+    	Componente.delComponente(spinner.getValue());
+		Iterator<String> it = nomesComponentes.iterator();
+		while(it.hasNext()){
+			if(it.next().equals(spinner.getValue())){
+				it.remove();
+			}
+		}
 		
-//		List<Componente> componentes = eu.getUsuarioComponentes();
+		valueFactory = new SpinnerValueFactory.ListSpinnerValueFactory<String>(FXCollections.observableArrayList(nomesComponentes));
+		spinner.setValueFactory(valueFactory);
+		
+//		List<Componente> componentes =  MainApp.getUsuario().getUsuarioComponentes();
 //		for (Componente componente : componentes) {
 //			List<Estatistica> estatisticas = componente.getComponenteEstatisticas();
 //			for(Estatistica estatistica : estatisticas){

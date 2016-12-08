@@ -24,12 +24,13 @@ public class RegisterComponentController {
 		
 	}
 	
+	
 	@FXML
 	public void handlerRegisterComponent() throws ClassNotFoundException, SQLException{
 		
 		Componente componente = new Componente(tfName.getText(),tfInfo.getText(), null);
-		//TODO URGENTE receber usuário como parâmetro na tela 
-		//componente.addComponente(usuario.getLogin());
+		System.out.println(MainApp.getUsuario().getLogin());
+		componente.addComponente(MainApp.getUsuario().getLogin());
 		//TODO mensagem de sucesso ou de voltar para alguma página
 
 	}

@@ -23,8 +23,8 @@ public class Componente {
 		Database.update(sql);
 	}
 
-	public void delComponente() throws ClassNotFoundException, SQLException {
-		String sql = "delete from componentes where nome = '"+this.nome+"'";
+	public static void delComponente(String nomeDoComponente) throws ClassNotFoundException, SQLException {
+		String sql = "delete from componentes where nome = '"+nomeDoComponente+"'";
 		System.out.println(sql);
 		Database.update(sql);
 	}

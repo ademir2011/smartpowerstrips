@@ -41,6 +41,7 @@ public class SignInController {
 		if(usuario.autenticate()){
 			Util.gotoPage(menuAuthenticated, "../view/MenuAuthenticated.fxml", "MenuAuthenticatedController", mainApp);
 			Util.gotoPage(component, "../view/Component.fxml", "Component", mainApp);
+			MainApp.setUsuario(usuario);
 		}else{
 			//Mensagem dizendo que houve falha na autenticação
 		}

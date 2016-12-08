@@ -24,6 +24,10 @@ public class Usuario {
 	}
 
 	public List<Componente> getUsuarioComponentes() throws ClassNotFoundException, SQLException{
+		System.out.println("dddddddddddddddddddddd");
+		System.out.println("dddddddddddddddddddddd");
+		System.out.println("dddddddddddddddddddddd");
+		System.out.println("dddddddddddddddddddddd");
 		List<Componente> componentes = Componente.componentes(this.login);
 		return componentes;
 	}

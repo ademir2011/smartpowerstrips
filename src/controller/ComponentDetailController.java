@@ -40,6 +40,7 @@ public class ComponentDetailController {
     public void initialize() {
 		series1.setName("Ponto de fechamento de ciclo");
 	    lineChart.getData().addAll(series1);
+	    System.out.println(MainApp.getComponenteMain().getNome());
 	}
 	
 	@FXML
